@@ -1,0 +1,13 @@
+<launch>
+
+    <!-- Map server -->
+    <node name="map_server" pkg="map_server" type="map_server" args="$(find wpr_command_center)/maps/map.yaml"/>
+
+    <!-- RViz and TF  -->
+    <arg name="rvizconfig" default="$(find wpr_command_center)/rviz/map.rviz" />
+    <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" /> -->
+
+    <!-- Command center  -->
+    <node pkg="wpr_command_center" type="wpr_command_center" name="wpr_command_center" output="screen" />
+
+</launch>

@@ -1,0 +1,11 @@
+<launch>
+
+   <!-- <include file="$(find wpr_warehousing_monitor)/launch/rviz_wpr_swarm.launch" /> -->
+   <include file="$(find wpr_warehousing_monitor)/launch/monitor.launch" />
+   <!-- <include file="$(find wpr_warehousing_monitor)/launch/monitor_without_env.launch" /> -->
+    <!-- <include file="$(find wpr_warehousing_monitor)/launch/wpr_server.launch" /> -->
+
+    <!-- Command center  -->
+    <node pkg="wpr_command_center" type="wpr_command_center" name="wpr_command_center" output="screen" required="true"/>
+
+</launch>
